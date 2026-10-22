@@ -1,0 +1,2 @@
+-r requirements-preview.txt
+primesense>=2.2.0.30

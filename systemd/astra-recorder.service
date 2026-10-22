@@ -1,0 +1,14 @@
+[Unit]
+Description=Orbbec Astra egocentric RGB+Depth recorder
+After=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/astra_egocentric_recorder
+ExecStart=/home/pi/astra_egocentric_recorder/.venv/bin/python /home/pi/astra_egocentric_recorder/astra_record.py --out /home/pi/astra_recordings
+Restart=on-failure
+RestartSec=3
+User=pi
+
+[Install]
+WantedBy=multi-user.target
